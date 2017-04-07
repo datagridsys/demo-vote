@@ -1,10 +1,10 @@
 CONTAINER_NAME=demo-vote
 
-.PHONY: container \
-		push
+.PHONY: image \
+        push
 
-container:
-	docker build -f Dockerfile -t datagridsys/${CONTAINER_NAME} .
+image:
+    docker build -f Dockerfile -t datagridsys/${CONTAINER_NAME} .
 
 push:
-	docker push datagridsys/${CONTAINER_NAME}
+    docker push datagridsys/${CONTAINER_NAME}:latest

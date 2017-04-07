@@ -8,7 +8,6 @@ node {
         slackSend color: "$co", message: "$msg: branch `${git_branch}`, commit " +
             "`${short_commit}`, job `${env.BUILD_TAG}` <${env.BUILD_URL}|Details>",
             tokenCredentialId: 'demo-slack'
-            //@@FIXME:  set new credential for demo-jenkins channel
     }
     def notify_fail = { msg -> notify('danger', "*FAILED* $msg") }
     def notify_pass = { msg -> notify('good', "PASSED $msg") }

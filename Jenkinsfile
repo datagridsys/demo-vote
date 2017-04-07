@@ -55,5 +55,5 @@ node {
     }
 
     // notify of success
-    notify_pass("$image_name build and push")
+    notify_pass("$image_name image build and push")
 }

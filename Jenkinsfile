@@ -11,6 +11,8 @@ node {
     }
     def notify_fail = { msg -> notify('danger', "*FAILED* $msg") }
     def notify_pass = { msg -> notify('good', "PASSED $msg") }
+
+    // image name to be built
     def image_name = 'demo-vote'
 
     stage('build') {

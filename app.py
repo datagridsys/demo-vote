@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, make_response, g, abort
+from flask import Flask, render_template, request, make_response, g
 from redis import Redis
 import os
 import socket
@@ -17,7 +17,6 @@ def get_redis():
 
 @app.route("/", methods=['POST','GET'])
 def hello():
-    abort(403)
     voter_id = request.cookies.get('voter_id')
     if not voter_id:
         voter_id = hex(random.getrandbits(64))[2:-1]

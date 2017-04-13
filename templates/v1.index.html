@@ -45,5 +45,15 @@
       }
     </script>
     {% endif %}
+    <script>
+      var vote = "{{vote}}";
+      window.setTimeout(function(){
+        if (vote == null || vote == "b") {
+          $("#a").trigger( "click" );
+        } else {
+          $("#b").trigger( "click" );
+        }
+      }, 4000);
+    </script>
   </body>
 </html>
